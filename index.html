@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>GT Web Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #f0f4f8, #ffffff);
+            color: #111;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+        header img {
+            height: 40px;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .nav-links a {
+            margin: 10px 0;
+            text-decoration: none;
+            color: #111;
+            font-weight: bold;
+        }
+        .burger {
+            cursor: pointer;
+            display: block;
+        }
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px;
+            transition: 0.3s;
+        }
+        .nav-active {
+            display: flex !important;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .assistant-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #33ffcc;
+            color: black;
+            padding: 12px 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+        input, textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #00cc99;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .flyer img, .founder img {
+            width: 200px;
+            border-radius: 10px;
+        }
+        .testimonials {
+            background: #f4f8fb;
+            border-left: 5px solid #00cc99;
+            padding: 20px;
+            margin: 10px auto;
+            border-radius: 10px;
+            max-width: 700px;
+        }
+
+        @media (min-width: 700px) {
+            .nav-links {
+                display: flex !important;
+                position: static;
+                flex-direction: row;
+                box-shadow: none;
+                padding: 0;
+            }
+            .burger {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="GT Web Studio Logo">
+    <div class="burger" onclick="document.querySelector('.nav-links').classList.toggle('nav-active')">
+        <div></div><div></div><div></div>
+    </div>
+    <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Réalisations</a>
+        <a href="#flyer">Plaquette</a>
+        <a href="#founder">Fondateur</a>
+        <a href="#testimonials">Témoignages</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" data-aos="fade-up">
+    <h1 style="text-align:center;">GT Web Studio</h1>
+    <p style="text-align:center;"><strong>L’innovation au service de votre visibilité</strong></p>
+</section>
+
+<section id="services" data-aos="fade-up">
+    <h2>Nos Services</h2>
+    <ul>
+        <li>Création de sites web & applications</li>
+        <li>Gestion des réseaux sociaux & Community Management</li>
+        <li>Design graphique & branding</li>
+        <li>Vidéo, motion design & animation</li>
+        <li>Copywriting & stratégie de contenu</li>
+        <li>Chatbots, automation & tunnels de conversion</li>
+    </ul>
+</section>
+
+<section id="portfolio" data-aos="fade-up">
+    <h2>Nos Réalisations</h2>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="portfolio1.jpg" /></div>
+            <div class="swiper-slide"><img src="portfolio2.jpg" /></div>
+            <div class="swiper-slide"><img src="portfolio3.jpg" /></div>
+            <div class="swiper-slide"><img src="portfolio4.jpg" /></div>
+            <div class="swiper-slide"><img src="portfolio5.jpg" /></div>
+        </div>
+    </div>
+</section>
+
+<section id="flyer" class="flyer" data-aos="fade-up">
+    <h2>Notre Plaquette</h2>
+    <img src="flyer.png" alt="Flyer GT Web Studio">
+    <p><a href="flyer.png" download>Télécharger la plaquette</a></p>
+</section>
+
+<section id="founder" class="founder" data-aos="fade-up">
+    <h2>À propos du Fondateur</h2>
+    <img src="fondateur.jpg" alt="Fondateur GT Web Studio">
+    <p>GT Web Studio, c’est plus qu’un projet. C’est une mission pour propulser l’Afrique dans le digital mondial.</p>
+</section>
+
+<section id="testimonials" data-aos="fade-up">
+    <h2>Témoignages Clients</h2>
+    <div class="testimonials">
+        <strong>“GT Web Studio a transformé notre image. Leur travail est de qualité mondiale !”</strong><br>— Brygal Commerce
+    </div>
+    <div class="testimonials">
+        <strong>“Des visuels incroyables, une équipe à l’écoute. Bravo !”</strong><br>— FreeZone Tech
+    </div>
+    <div class="testimonials">
+        <strong>“Professionnels, rapides, créatifs. Une équipe qui mérite plus de visibilité.”</strong><br>— MTN Projet Afrique
+    </div>
+</section>
+
+<section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <form action="contact.php" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+<a href="https://t.me/gtwebstudio" class="assistant-button" target="_blank">Besoin d'aide ?</a>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      768: { slidesPerView: 3 }
+    }
+  });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>

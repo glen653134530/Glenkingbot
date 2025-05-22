@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #0c0c0c;
+    color: #f0f0f0;
+}
+header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: none;
+}
+#toggle-menu {
+    display: none;
+}
+label[for="toggle-menu"] {
+    cursor: pointer;
+    font-size: 2em;
+}
+#toggle-menu:checked + label + ul {
+    display: block;
+}
+section {
+    padding: 2em;
+}
+h1, h2 {
+    color: #33ffcc;
+}
+.btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #33ffcc;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    margin-top: 1em;
+}
+.service {
+    background: #1a1a1a;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+.flyer {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 1em auto;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.founder-photo {
+    width: 150px;
+    border-radius: 50%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #111;
+    margin-top: 2em;
+}
+
+.site-logo {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
